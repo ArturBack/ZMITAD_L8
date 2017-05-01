@@ -48,15 +48,11 @@ public class ArffConverter {
     }
 
     private static String getLoanValue(Instance instance) {
-        return instance.stringValue(LOAN_VALUE_ATTRIBUTE_INDEX);
+        return instance.toString(LOAN_VALUE_ATTRIBUTE_INDEX);
     }
 
     private static boolean isLoanToHigh(String loanValue){
-        if(loanValue.contains(",")){
-            String convertedLoanValue = loanValue.replace(',' , '.');
-            return Double.parseDouble(convertedLoanValue) > MAX_LOAN_VALUE;
-        }
-        return Integer.parseInt(loanValue) > MAX_LOAN_VALUE;
+        return Double.parseDouble(loanValue) > MAX_LOAN_VALUE;
     }
 
     private static String getLoanStatus(Instance instance){
