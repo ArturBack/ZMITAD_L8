@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class DataProvider {
 
-    private String FILE_NAME = "212695L2 2.arff";
+    private String FILE_NAME = "212695L3 1.arff";
 
     private static DataProvider instance;
 

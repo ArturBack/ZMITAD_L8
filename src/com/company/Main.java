@@ -9,9 +9,10 @@ public class Main {
     public static void main(String[] args) {
         Instances data = DataProvider.getInstance().getData();
 
-        Instances newInstances = ArffConverter.deleteProperRecords(data);
-        newInstances = ArffConverter.deleteLoanStatusAttribute(newInstances);
+        //Instances newInstances = ArffConverter.deleteProperRecords(data);
+        //newInstances = ArffConverter.deleteLoanStatusAttribute(newInstances);
+        GainRatioAnalyzer.analyse(data);
 
-        DataSaver.getInstance().saveData(newInstances);
+        DataSaver.getInstance().saveData(data);
     }
 }
