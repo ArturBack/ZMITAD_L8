@@ -25,7 +25,7 @@ public class TestAnalyser {
         double GMean = Math.sqrt(TPrate * TNrate);
         System.out.println("GMean: " + GMean);
 
-        double AUC = (1 + TPrate + FPrate) / 2;
+        double AUC = (1 + TPrate - FPrate) / 2;
         System.out.println("AUC: " + AUC);
     }
 }

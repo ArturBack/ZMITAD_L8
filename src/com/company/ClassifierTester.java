@@ -31,8 +31,8 @@ public class ClassifierTester {
 
             Evaluation evaluation = new Evaluation(data);
             for (int j = 0; j < foldsNumber; j++) {
-                Instances train = data.trainCV(foldsNumber, i);
-                Instances test = data.testCV(foldsNumber, i);
+                Instances train = data.trainCV(foldsNumber, j);
+                Instances test = data.testCV(foldsNumber, j);
 
                 Classifier c = classifier;
                 c.buildClassifier(train);

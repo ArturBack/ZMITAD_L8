@@ -6,6 +6,6 @@ package com.company;
 public class TestParams {
 
     public static int FOLDS_NUMBER = 10;
-    public static int REPEAT = 4;
+    public static int REPEAT = 1;
 
 }
